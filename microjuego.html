@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Microjuego - Pol Fajardo</title>
+    <link rel="stylesheet" href="estilo.css" />
+    <script>
+        let numero = Math.floor(Math.random() * 100) + 1;
+        let intentos = 0; // Inicializamos el contador de intentos
+
+        function compara_numero() {
+            let my_num_input = document.getElementById("numerouwu");
+            let my_num = my_num_input.value;
+            let resultado = document.getElementById("resultado");
+            let adivina_button = document.getElementById("adivina");
+
+            intentos++;
+
+            if (my_num > numero) {
+                resultado.innerHTML = "<em class=\"error\">Es más <strong>pequeño</strong></em>";
+                resultado.style.color = "red";
+                my_num_input.style.border = "1px solid red";
+            }
+            else if (my_num < numero) {
+                resultado.innerHTML = "<em class=\"error\">Es más <strong>grande</strong></em>";
+                resultado.style.color = "red";
+                my_num_input.style.border = "1px solid red"; 
+            }
+            else {
+                resultado.innerHTML = "<strong>¡Es igual!</strong>";
+                resultado.style.color = "green";
+                my_num_input.style.border = "1px solid green"; 
+            }
+
+            if (intentos >= 10) {
+                adivina_button.disabled = true;
+                resultado.innerHTML += "<br><strong>Lo has intentado ya 10 veces, has perdido :( </strong>";
+            }
+
+            my_num_input.value = "";
+            my_num_input.focus();
+        }
+    </script>
+</head>
+<body>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="microjuego.html">Microjuego</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Microjuego</h1>
+    </header>
+
+    <main>
+        <form>
+            <h2>Adivina el número</h2>
+            <p>
+                Adivina el número que he generado. Es un número entre el 
+                <strong>1</strong> y el <strong>100</strong>
+            </p>
+            <p id="resultado">¡Prueba suerte!</p>
+            <label for="numero">Tu número:</label>
+            <input type="number" id="numerouwu" name="numerouwu">
+            <input type="button" value="Adivina" id="adivina" onClick="compara_numero();">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Pol Fajardo</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+

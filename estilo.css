@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna Segoe UI */
+    background-color: #f0f8ff; /* Azul claro */
+    color: #222;
+}
+
+.menu {
+    background-color: #0077cc; /* Azul */
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li {
+    margin: 0 20px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #ffe600; /* Amarillo */
+}
+
+header h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.5em;
+    color: #005999;
+}
+
+main {
+    text-align: left;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+    border: 3px solid #000; /* Borde negro */
+    transition: border-radius 0.3s ease;
+}
+
+main:hover {
+    border-radius: 20px;
+}
+
+main section {
+    margin-bottom: 20px;
+}
+
+main ul {
+    padding-left: 20px;
+}
+
+footer {
+    background-color: #0077cc;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+progress.barra {
+    height: 25px;
+    border-radius: 15px;
+    background-color: #e0e0e0; /* Gris claro */
+    margin-top: 5px;
+    width: 100%; 
+}
+
+progress.barra.catalan {
+    background-color: #4caf50; /* Verde */
+}
+
+progress.barra.espanol {
+    background-color: #ff6347; /* Rojo tomate */
+}
+
+progress.barra.ingles {
+    background-color: #ff9800; /* Naranja */
+}
+
+
+
+
+
